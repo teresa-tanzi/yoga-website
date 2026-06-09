@@ -15,15 +15,15 @@ export const siteContent = {
     { id: 'home', label: 'Home' },
     { id: 'chi-sono', label: 'Chi sono' },
     { id: 'stili', label: 'Stili di Yoga' },
-    { id: 'natura', label: 'Yoga & Natura' },
-    { id: 'calendario', label: 'Calendario' },
+    { id: 'natura', label: 'Dove insegno' },
+    { id: 'calendario', label: 'Calendario & Eventi' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contatti', label: 'Contatti' },
   ],
 
   home: {
     hero: {
-      image: '/images/hero-yoga-nature.png',
+      image: '/images/hero-yoga-nature.jpg',
       imageAlt: 'Pratica di yoga nella natura alla luce dorata del mattino',
       title: 'Trova il tuo spazio.\nRitrova il tuo equilibrio.',
       subtitle:
@@ -57,7 +57,7 @@ export const siteContent = {
   chiSono: {
     eyebrow: 'La mia storia',
     title: 'Chi sono',
-    image: '/images/instructor-portrait.png',
+    image: '/images/instructor-portrait.jpg',
     imageAlt: 'Ritratto di Cecilia Tanzi, istruttrice di yoga',
     sections: [
       {
@@ -95,7 +95,7 @@ export const siteContent = {
       {
         name: 'Hatha Yoga Dinamico',
         tag: 'Equilibrio',
-        tagColor: 'sage',
+        tagColor: 'terracotta',
         text: 'Un equilibrio tra stabilità e movimento. Posizioni mantenute con consapevolezza, alternate a transizioni dolci per costruire forza, mobilità e presenza.',
       },
       {
@@ -107,14 +107,14 @@ export const siteContent = {
       {
         name: 'Ashtanga Yoga',
         tag: 'Tradizionale',
-        tagColor: 'sage',
+        tagColor: 'terracotta',
         text: 'Il metodo tradizionale, rigoroso e trasformativo. Focus su respiro Ujjayi, sguardo Drishti e attivazione dei Bandha per una pratica meditativa in movimento.',
       },
     ],
   },
 
   natura: {
-    eyebrow: 'Yoga & Natura',
+    eyebrow: 'Dove insegno',
     title: 'Le mie sedi nella natura',
     intro:
       'La natura è il cuore del mio modo di insegnare. Ogni luogo offre un\u2019esperienza unica, tra terra, acqua e profumi.',
@@ -123,45 +123,49 @@ export const siteContent = {
         name: 'Ayre Studio',
         location: 'Oggiono',
         text: 'La prima casa del mio insegnamento: uno spazio caldo e accogliente dove tutto è cominciato, ideale per la pratica regolare durante la settimana.',
-        image: '/images/ayre-studio.png',
+        image: '/images/ayre-studio.jpeg',
         imageAlt: 'Interno luminoso dello studio Ayre a Oggiono',
+        mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6',
       },
       {
         name: 'Yoga tra i Vigneti',
         location: 'Polisena',
         text: 'Il sabato mattina tra i filari, seguito da un pranzo biologico a base vegetale dello chef Francesco Locatelli. Un risveglio dei sensi tra movimento e buon cibo.',
-        image: '/images/vineyard-yoga.png',
+        image: '/images/vineyard-yoga.jpg',
         imageAlt: 'Pratica di yoga tra i vigneti di Polisena',
+        mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9',
       },
       {
         name: 'Hatha Yoga sul Lago',
         location: 'Kayak Oggiono',
         text: 'La domenica mattina affacciati sul Lago di Annone. Una pratica dolce di Hatha cullata dal respiro dell\u2019acqua, per iniziare la settimana in pace.',
-        image: '/images/lake-kayak-yoga.png',
+        image: '/images/lake-kayak-yoga.jpeg',
         imageAlt: 'Hatha yoga sul Lago di Annone con kayak sulla riva',
+        mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6',
       },
       {
         name: 'Tra Lavanda e Rosmarino',
         location: 'Az. Agr. Dattilo Elisa',
         text: 'Il venerdì sera, un\u2019esperienza multisensoriale tra campi di lavanda e rosmarino al tramonto. Profumi, colori e silenzio per lasciare andare la settimana.',
-        image: '/images/lavender-yoga.png',
+        image: '/images/lavender-yoga.webp',
         imageAlt: 'Yoga serale tra campi di lavanda e rosmarino al tramonto',
+        mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
       },
     ],
   },
 
   calendario: {
-    eyebrow: 'Calendario',
+    eyebrow: 'Calendario & Eventi',
     title: 'Gli orari settimanali',
     intro:
       'Una settimana di pratica tra studio e natura. Scegli il giorno e lo stile che senti più tuo.',
     scheduleTitle: 'Orari settimanali',
     schedule: [
-      { day: 'Martedì', time: '19:00', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono' },
-      { day: 'Venerdì', time: '18:30', style: 'Yoga Multisensoriale', place: 'Az. Agr. Dattilo Elisa' },
-      { day: 'Sabato', time: '09:30', style: 'Hatha Dinamico + Brunch', place: 'Vigneti · Polisena' },
-      { day: 'Domenica', time: '09:00', style: 'Hatha Yoga sul Lago', place: 'Kayak · Oggiono' },
-      { day: 'Domenica', time: '18:00', style: 'Ashtanga Yoga', place: 'Ayre Studio · Oggiono' },
+      { day: 'Martedì', time: '19:00', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
+      { day: 'Venerdì', time: '18:30', style: 'Yoga Multisensoriale', place: 'Az. Agr. Dattilo Elisa', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
+      { day: 'Sabato', time: '09:30', style: 'Hatha Dinamico + Brunch', place: 'Vigneti · Polisena', mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9' },
+      { day: 'Domenica', time: '09:00', style: 'Hatha Yoga sul Lago', place: 'Kayak · Oggiono', mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6' },
+      { day: 'Domenica', time: '18:00', style: 'Ashtanga Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
     ],
     eventiTitle: 'Eventi',
     eventiIntro:
@@ -206,9 +210,9 @@ export const siteContent = {
       'Hai una domanda o vuoi prenotare la tua prima lezione? Scrivimi: sarò felice di accompagnarti.',
     details: [
       { label: 'Email', value: 'cecilia_tanzi@yahoo.it', href: 'mailto:cecilia_tanzi@yahoo.it' },
-      { label: 'Telefono', value: '+39 333 123 4567', href: 'tel:+393331234567' },
-      { label: 'Instagram', value: '@cecilia.tanzi.yoga', href: 'https://instagram.com' },
-      { label: 'Sedi', value: 'Oggiono · Polisena · Lecco e Brianza', href: null },
+      { label: 'WhatsApp', value: '+39 348 984 2081', href: 'https://wa.me/393489842081?text=Ciao%20Cecilia%2C%20vorrei%20informazioni%20sui%20tuoi%20corsi%20di%20yoga' },
+      { label: 'Instagram', value: '@cecilia_tanzi_yoga', href: 'https://www.instagram.com/cecilia_tanzi_yoga/' },
+      { label: 'Sedi', value: 'Oggiono · Pontida · La Valletta Brianza (LC)', href: null },
     ],
     form: {
       nameLabel: 'Nome',

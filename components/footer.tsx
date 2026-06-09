@@ -1,9 +1,8 @@
 import { siteContent, type PageId } from '@/lib/site-content'
 import { Logo } from '@/components/logo'
-
 export function Footer({ goTo }: { goTo: (page: PageId) => void }) {
   return (
-    <footer className="border-t border-border/60 bg-sage-soft/40 px-6 py-12">
+    <footer className="border-t border-border/60 bg-background px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs">
           <Logo onClick={() => goTo('home')} />
@@ -28,7 +27,15 @@ export function Footer({ goTo }: { goTo: (page: PageId) => void }) {
         </nav>
       </div>
       <div className="mx-auto mt-10 max-w-6xl border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {siteContent.brand.name} · {siteContent.brand.discipline}
+        © {new Date().getFullYear()} {siteContent.brand.name} · {siteContent.brand.discipline} · Sito realizzato da{' '}
+        <a
+          href="https://github.com/teresa-tanzi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-foreground"
+        >
+          Teresa Tanzi
+        </a>
       </div>
     </footer>
   )

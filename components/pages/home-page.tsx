@@ -64,7 +64,7 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
       </section>
 
       {/* Highlights */}
-      <section className="bg-sage-soft/50 px-6 py-20">
+      <section className="bg-background px-6 pb-20">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
           {highlights.map((h) => (
             <div

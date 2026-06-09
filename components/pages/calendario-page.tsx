@@ -55,8 +55,15 @@ export function CalendarioPage() {
                     {row.time}
                   </td>
                   <td className="px-5 py-4 text-foreground/90">{row.style}</td>
-                  <td className="hidden px-5 py-4 text-muted-foreground sm:table-cell">
-                    {row.place}
+                  <td className="hidden px-5 py-4 sm:table-cell">
+                    <a
+                      href={row.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground underline underline-offset-2 transition-colors hover:text-terracotta"
+                    >
+                      {row.place}
+                    </a>
                   </td>
                 </tr>
               ))}

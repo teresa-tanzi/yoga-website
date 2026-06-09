@@ -33,12 +33,17 @@ export function NaturaPage() {
                 />
               </div>
               <div className={cn(reversed && 'md:order-1')}>
-                <div className="flex items-center gap-2 text-terracotta">
+                <a
+                  href={place.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-terracotta transition-opacity hover:opacity-70"
+                >
                   <MapPin className="size-4" />
-                  <span className="text-xs font-semibold uppercase tracking-widest">
+                  <span className="text-xs font-semibold uppercase tracking-widest underline underline-offset-2">
                     {place.location}
                   </span>
-                </div>
+                </a>
                 <h3 className="mt-3 font-serif text-3xl font-semibold text-foreground">
                   {place.name}
                 </h3>

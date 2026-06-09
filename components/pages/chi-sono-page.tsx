@@ -42,7 +42,7 @@ export function ChiSonoPage() {
           ))}
 
           {/* Box filosofia */}
-          <div className="rounded-2xl border border-sage/40 bg-sage-soft/60 p-7">
+          <div className="rounded-2xl border border-border bg-card p-7">
             <h3 className="font-serif text-xl font-semibold text-foreground">
               {philosophy.title}
             </h3>

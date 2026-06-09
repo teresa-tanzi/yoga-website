@@ -6,10 +6,20 @@ import { siteContent } from '@/lib/site-content'
 export function ContattiPage() {
   const { eyebrow, title, intro, details, form } = siteContent.contatti
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    const res = await fetch('https://formspree.io/f/mvznqper', {
+      method: 'POST',
+      body: new FormData(e.currentTarget),
+      headers: { Accept: 'application/json' },
+    })
+    if (res.ok) {
+      setSubmitted(true)
+    } else {
+      setError(true)
+    }
   }
 
   return (
@@ -60,8 +70,13 @@ export function ContattiPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <Field label={form.nameLabel} id="name" type="text" />
-              <Field label={form.emailLabel} id="email" type="email" />
+              {error && (
+                <p className="text-sm text-destructive">
+                  Qualcosa è andato storto. Riprova o scrivimi direttamente via email.
+                </p>
+              )}
+              <Field label={form.nameLabel} id="name" name="name" type="text" />
+              <Field label={form.emailLabel} id="email" name="email" type="email" />
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="message"
@@ -71,6 +86,7 @@ export function ContattiPage() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={5}
                   className="resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-terracotta focus:ring-1 focus:ring-terracotta"
@@ -93,10 +109,12 @@ export function ContattiPage() {
 function Field({
   label,
   id,
+  name,
   type,
 }: {
   label: string
   id: string
+  name: string
   type: string
 }) {
   return (
@@ -106,6 +124,7 @@ function Field({
       </label>
       <input
         id={id}
+        name={name}
         type={type}
         required
         className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-terracotta focus:ring-1 focus:ring-terracotta"
