@@ -11,7 +11,7 @@ export function Logo({ onClick }: { onClick?: () => void }) {
         <span className="font-serif text-lg font-semibold tracking-wide text-foreground">
           {siteContent.brand.name.toUpperCase()}
         </span>
-        <span className="mt-0.5 text-[0.6rem] font-medium uppercase tracking-widest text-terracotta">
+        <span className="mt-0.5 text-[0.6rem] font-medium uppercase tracking-[0.4em] text-terracotta">
           {siteContent.brand.discipline}
         </span>
       </span>
