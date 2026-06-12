@@ -62,15 +62,15 @@ export const siteContent = {
     sections: [
       {
         title: 'Il mio inizio al liceo',
-        text: 'Ho incontrato lo yoga durante gli anni del liceo, in un periodo fatto di incertezze e domande. Sul tappetino ho trovato una certezza silenziosa: un luogo dove tornare a respirare, ascoltarmi e ritrovare stabilità quando tutto intorno sembrava in movimento.',
+        text: "Ho iniziato a praticare yoga durante il quinto anno di liceo, in un periodo in cui molte domande sul futuro iniziavano a farsi spazio.\n\nCome accade a tanti ragazzi e ragazze della mia età, cercavo di capire quale direzione prendere, quali fossero davvero le mie passioni e che persona volessi diventare. In mezzo a tutte queste incertezze, lo yoga è diventato una delle poche certezze.\n\nQuella che all'inizio era semplicemente un'ora dedicata al movimento si è trasformata lentamente in uno spazio di calma, ascolto e chiarezza. Sul tappetino ho imparato a rallentare, a osservare ciò che accadeva dentro e fuori di me e ad accettare che non tutte le risposte debbano arrivare subito.\n\nNegli anni successivi la pratica mi ha accompagnata attraverso gli studi universitari, i cambiamenti e le esperienze che hanno contribuito a definire la persona che sono oggi. Per molto tempo lo yoga è rimasto un percorso profondamente personale, un luogo in cui tornare ogni volta che sentivo il bisogno di ritrovare equilibrio.\n\nNon immaginavo che un giorno sarebbe diventato anche parte del mio lavoro, ma guardando indietro mi accorgo che è sempre stato il filo conduttore della mia crescita.",
       },
       {
-        title: 'L\u2019incontro con l\u2019Ashtanga',
-        text: 'Con il tempo la pratica è diventata quotidiana. L\u2019Ashtanga mi ha insegnato disciplina, dedizione e gratitudine. Devo molto alla shala Yoga Nilaya, dove ho imparato a coltivare una pratica costante e profondamente personale.',
+        title: "L'incontro con l'Ashtanga Yoga",
+        text: "Dal 2019 pratico presso Yoga Nilaya a Lecco sotto la guida di Valentina Castelnuovo, un'insegnante che ha avuto un ruolo fondamentale nel mio percorso.\n\nCon lei ho scoperto l'Ashtanga Yoga e ho compreso che la pratica va ben oltre l'aspetto fisico. Mi ha insegnato il valore della costanza, della pazienza e della presenza quotidiana sul tappetino, anche nei giorni in cui tutto sembra più difficile.\n\nFin dall'inizio mi ha incoraggiata a guardare oltre il risultato, invitandomi a sviluppare ascolto, curiosità e rispetto per il mio percorso personale. Grazie al suo esempio ho capito che lo yoga non è qualcosa che si vive soltanto durante una lezione, ma un modo di relazionarsi a se stessi e agli altri.\n\nNegli anni mi ha accompagnata con competenza e sensibilità, sostenendo la mia crescita come praticante e alimentando il desiderio di approfondire sempre di più questa disciplina.\n\nMolto di ciò che oggi porto nelle mie classi nasce dall'esperienza vissuta nella sua shala: l'attenzione alla persona, il rispetto dei tempi individuali e la convinzione che la pratica debba essere prima di tutto uno strumento di crescita e consapevolezza.",
       },
       {
-        title: 'Dalla pratica all\u2019insegnamento',
-        text: 'Nel 2025 ho completato la formazione RYT-200 e ottenuto il diploma CONI, unendo un approccio scientifico al corpo alla ricchezza della tradizione. Oggi insegno con il desiderio di rendere lo yoga accessibile, sicuro e autentico per ogni persona.',
+        title: "Dalla pratica personale all'insegnamento",
+        text: "Per molti anni lo yoga è stato uno spazio esclusivamente mio. Non ho mai iniziato a praticare con l'idea di diventare insegnante. Salivo sul tappetino per stare bene, ritrovare equilibrio e continuare a conoscermi attraverso il movimento e il respiro.\n\nCon il tempo, però, mi sono resa conto che ciò che stavo imparando andava oltre la pratica fisica. Lo yoga aveva trasformato il mio modo di affrontare le difficoltà, ascoltare il corpo e gestire lo stress. Da questa consapevolezza è nato il desiderio di approfondire lo studio e acquisire gli strumenti necessari per condividere con altri ciò che per me era diventato una risorsa così preziosa.\n\nNel 2025 ho iniziato il percorso di Formazione Insegnanti Ashtanga Vinyasa Yoga RYT-200 presso Centrolistico APS. È stato un anno intenso, ricco di studio, pratica e confronto, che mi ha permesso di approfondire sia gli aspetti tecnici dell'insegnamento sia la responsabilità di guidare una classe in modo sicuro e rispettoso.\n\nAl termine del percorso ho conseguito il Diploma Nazionale con qualifica tecnica di insegnante di attività sportiva riconosciuto da Libertas e affiliato al CONI. Lo considero però non un punto di arrivo, ma una tappa all'interno di un percorso che continua ancora oggi attraverso lo studio, la pratica e la formazione continua.",
       },
     ],
     philosophy: {
@@ -125,7 +125,7 @@ export const siteContent = {
       {
         name: 'Ayre Studio',
         location: 'Oggiono',
-        text: 'La prima casa del mio insegnamento: uno spazio caldo e accogliente dove tutto è cominciato, ideale per la pratica regolare durante la settimana.',
+        text: "Le lezioni settimanali di Hatha Yoga Dinamico e Vinyasa Yoga si svolgono presso Ayre Studio, uno spazio dedicato al movimento, al benessere e alla crescita personale.\n\nLa sala luminosa e l’atmosfera accogliente creano un ambiente ideale per praticare con continuità, sviluppare consapevolezza e ritagliarsi un momento di equilibrio nella vita quotidiana.\n\nLe classi sono aperte a tutti i livelli e pensate per offrire una pratica accessibile, inclusiva e rispettosa delle esigenze di ogni persona.",
         image: '/images/ayre-studio.jpeg',
         imageAlt: 'Interno luminoso dello studio Ayre a Oggiono',
         mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6',
@@ -133,7 +133,7 @@ export const siteContent = {
       {
         name: 'Yoga tra i Vigneti',
         location: 'Polisena',
-        text: 'Il sabato mattina tra i filari, seguito da un pranzo biologico a base vegetale dello chef Francesco Locatelli. Un risveglio dei sensi tra movimento e buon cibo.',
+        text: "Ogni sabato mattina collaboro con Polisena – L’Altro Agriturismo, una realtà legata alla sostenibilità, all’agricoltura biologica e all’ospitalità.\n\nLe lezioni si svolgono tra i vigneti che circondano la struttura, offrendo la possibilità di iniziare la giornata immersi nella natura attraverso una pratica di yoga accessibile e rigenerante.\n\nAl termine dell’esperienza viene proposto un pranzo leggero a base vegetale, preparato con ingredienti stagionali e del territorio.",
         image: '/images/vineyard-yoga.jpg',
         imageAlt: 'Pratica di yoga tra i vigneti di Polisena',
         mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9',
@@ -141,7 +141,7 @@ export const siteContent = {
       {
         name: 'Hatha Yoga sul Lago',
         location: 'Kayak Oggiono',
-        text: 'La domenica mattina affacciati sul Lago di Annone. Una pratica dolce di Hatha cullata dal respiro dell\u2019acqua, per iniziare la settimana in pace.',
+        text: "Durante la stagione estiva conduco lezioni di Hatha Yoga Dinamico la domenica mattina presso il Kayak Oggiono.\n\nPraticare yoga all'aperto, affacciati sul suggestivo scenario del Lago di Annone, offre un'esperienza unica che unisce movimento, respirazione e contatto con la natura.\n\nIl silenzio del mattino, la luce che si riflette sull'acqua e il paesaggio circostante creano le condizioni ideali per rallentare, ritrovare energia e iniziare la giornata con equilibrio e serenità.\n\nLe lezioni sono accessibili a tutti i livelli e rappresentano un'occasione speciale per vivere lo yoga in un contesto naturale di grande bellezza.",
         image: '/images/lake-kayak-yoga.jpeg',
         imageAlt: 'Hatha yoga sul Lago di Annone con kayak sulla riva',
         mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6',
@@ -149,7 +149,7 @@ export const siteContent = {
       {
         name: 'Tra Lavanda e Rosmarino',
         location: 'Az. Agr. Dattilo Elisa',
-        text: 'Il venerdì sera, un\u2019esperienza multisensoriale tra campi di lavanda e rosmarino al tramonto. Profumi, colori e silenzio per lasciare andare la settimana.',
+        text: "Il venerdì sera collaboro con Azienda Agricola Dattilo Elisa, una realtà del territorio impegnata nella valorizzazione delle coltivazioni locali.\n\nLe lezioni si svolgono all’aperto, tra filari di lavanda, rosmarino e altre essenze aromatiche, creando un’esperienza multisensoriale che coinvolge movimento, respirazione e percezione dell’ambiente circostante.\n\nI profumi della campagna, la luce del tramonto e il contatto diretto con la terra rendono ogni incontro un’occasione per rallentare, ascoltarsi e ritrovare benessere in modo semplice e naturale.\n\nLe pratiche sono aperte a tutti i livelli e rappresentano un’opportunità per vivere lo yoga in un contesto autentico e immerso nella natura.",
         image: '/images/lavender-yoga.webp',
         imageAlt: 'Yoga serale tra campi di lavanda e rosmarino al tramonto',
         mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',

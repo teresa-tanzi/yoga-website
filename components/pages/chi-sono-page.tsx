@@ -35,9 +35,13 @@ export function ChiSonoPage() {
               <h2 className="font-serif text-2xl font-semibold text-foreground">
                 {s.title}
               </h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                {s.text}
-              </p>
+              <div className="mt-3 flex flex-col gap-3">
+                {s.text.split('\n\n').map((p, i) => (
+                  <p key={i} className="leading-relaxed text-muted-foreground">
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
 

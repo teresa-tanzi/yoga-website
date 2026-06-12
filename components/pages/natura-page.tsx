@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { MapPin } from 'lucide-react'
-import { siteContent } from '@/lib/site-content'
+import { siteContent, type PageId } from '@/lib/site-content'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-export function NaturaPage() {
+export function NaturaPage({ goTo }: { goTo: (page: PageId) => void }) {
   const { eyebrow, title, intro, places } = siteContent.natura
 
   return (
@@ -47,13 +47,25 @@ export function NaturaPage() {
                 <h3 className="mt-3 font-serif text-3xl font-semibold text-foreground">
                   {place.name}
                 </h3>
-                <p className="mt-4 leading-relaxed text-muted-foreground">
-                  {place.text}
-                </p>
+                <div className="mt-4 flex flex-col gap-3">
+                  {place.text.split('\n\n').map((p, i) => (
+                    <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>
+                  ))}
+                </div>
               </div>
             </div>
           )
         })}
+      </div>
+
+      <div className="mt-20 text-center">
+        <p className="text-sm text-muted-foreground">Vuoi unirti a una delle mie pratiche?</p>
+        <button
+          onClick={() => goTo('calendario')}
+          className="mt-3 rounded-full bg-terracotta px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-lg transition-all hover:bg-terracotta-dark hover:shadow-xl"
+        >
+          Scopri gli orari
+        </button>
       </div>
     </section>
   )
