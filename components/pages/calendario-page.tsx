@@ -54,7 +54,17 @@ export function CalendarioPage() {
                   <td className="px-5 py-4 font-semibold text-terracotta">
                     {row.time}
                   </td>
-                  <td className="px-5 py-4 text-foreground/90">{row.style}</td>
+                  <td className="px-5 py-4 text-foreground/90">
+                    {row.style}
+                    <a
+                      href={row.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-0.5 block text-xs text-muted-foreground underline underline-offset-2 hover:text-terracotta sm:hidden"
+                    >
+                      {row.place}
+                    </a>
+                  </td>
                   <td className="hidden px-5 py-4 sm:table-cell">
                     <a
                       href={row.mapsUrl}
@@ -74,17 +84,12 @@ export function CalendarioPage() {
 
       {/* Eventi */}
       <div className="mt-16">
-        <h3 className="font-serif text-2xl font-semibold text-foreground">
-          {eventiTitle}
-        </h3>
-        <p className="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
-          {eventiIntro}
-        </p>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+        <SectionHeading title={eventiTitle} intro={eventiIntro} />
+        <div className="mt-6 flex justify-center">
           {eventi.map((ev) => (
             <article
               key={ev.title}
-              className="flex flex-col gap-4 rounded-3xl border border-border bg-card p-8"
+              className="flex w-full max-w-2xl flex-col gap-4 rounded-3xl border border-border bg-card p-8"
             >
               <div className="flex flex-wrap items-center gap-3">
                 <span className="flex items-center gap-2 rounded-full bg-terracotta px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
@@ -98,7 +103,11 @@ export function CalendarioPage() {
               <h4 className="font-serif text-2xl font-semibold text-foreground">
                 {ev.title}
               </h4>
-              <p className="leading-relaxed text-muted-foreground">{ev.text}</p>
+              <div className="flex flex-col gap-3">
+                {ev.text.split('\n\n').map((p, i) => (
+                  <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>
+                ))}
+              </div>
             </article>
           ))}
         </div>

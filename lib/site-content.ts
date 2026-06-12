@@ -164,11 +164,11 @@ export const siteContent = {
       'Una settimana di pratica tra studio e natura. Scegli il giorno e lo stile che senti più tuo.',
     scheduleTitle: 'Orari settimanali',
     schedule: [
-      { day: 'Martedì', time: '19:00', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
-      { day: 'Venerdì', time: '18:30', style: 'Yoga Multisensoriale', place: 'Az. Agr. Dattilo Elisa', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
-      { day: 'Sabato', time: '09:30', style: 'Hatha Dinamico + Brunch', place: 'Vigneti · Polisena', mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9' },
-      { day: 'Domenica', time: '09:00', style: 'Hatha Yoga sul Lago', place: 'Kayak · Oggiono', mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6' },
-      { day: 'Domenica', time: '18:00', style: 'Ashtanga Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
+      { day: 'Martedì', time: '20:15 - 21.15', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
+      { day: 'Giovedì', time: '20:00 - 21:00', style: 'Hata Yoga Dinamico', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
+      { day: 'Venerdì', time: '20:00 - 21:00', style: 'Yoga nella Natura', place: 'Az. Agr. Dattilo Elisa · La Valletta Brianza', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
+      { day: 'Sabato', time: '10:00 - 11:00', style: 'Yoga tra i Vigneti', place: 'Polisena · Pontida', mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9' },
+      { day: 'Domenica', time: '09:30 - 10:30', style: 'Hatha Yoga al Lago', place: 'Kayak · Oggiono', mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6' },
     ],
     eventiTitle: 'Eventi',
     eventiIntro:
@@ -178,8 +178,7 @@ export const siteContent = {
         badge: 'Progetto 2026',
         title: 'Yoga per i giovani al Cubo³ di Lecco',
         when: 'Da settembre 2026',
-        text: 'Un progetto a me molto caro: portare lo yoga ai giovani negli spazi del Cubo³ di Lecco. Uno spazio sicuro dove respiro, movimento e consapevolezza diventano strumenti di crescita.',
-      },
+               text: "Da settembre inizierà una nuova e importante collaborazione con alCUBO³, il nuovo hub giovanile nato all'interno del Centro Civico Pertini di Lecco grazie a un progetto condiviso tra Comune, associazioni e realtà del territorio. Lo spazio è stato pensato come un luogo aperto in cui i giovani possano incontrarsi, sviluppare idee, partecipare ad attività culturali, sportive e sociali e sentirsi parte attiva della comunità.\n\nAll'interno di questo progetto collaborerò insieme ad altri insegnanti volontari per proporre attività yoga dedicate ai giovani della città.\n\nL'obiettivo è semplice ma ambizioso: rendere lo yoga accessibile alle nuove generazioni, offrendo uno spazio in cui rallentare, imparare ad ascoltarsi, gestire lo stress e sviluppare maggiore consapevolezza di sé.\n\nCredo profondamente che questa disciplina possa rappresentare uno strumento prezioso per i ragazzi e le ragazze di oggi, aiutandoli a coltivare equilibrio, presenza e benessere in una fase della vita ricca di cambiamenti e sfide.\n\nPartecipare a questo progetto significa per me contribuire alla costruzione di una comunità più attenta alla salute, alle relazioni e alla crescita personale, mettendo lo yoga al servizio del territorio e delle persone che lo abitano.",      },
     ],
   },
 
