@@ -47,7 +47,7 @@ export function ContattiPage() {
                   href={d.href}
                   target={d.href.startsWith('http') ? '_blank' : undefined}
                   rel="noreferrer"
-                  className="mt-1 block font-serif text-lg text-foreground transition-colors hover:text-terracotta"
+                  className="mt-1 block font-serif text-lg text-foreground underline underline-offset-4 transition-colors hover:text-terracotta"
                 >
                   {d.value}
                 </a>

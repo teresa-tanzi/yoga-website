@@ -214,7 +214,7 @@ export const siteContent = {
       { label: 'Email', value: 'cecilia_tanzi@yahoo.it', href: 'mailto:cecilia_tanzi@yahoo.it' },
       { label: 'WhatsApp', value: '+39 348 984 2081', href: 'https://wa.me/393489842081?text=Ciao%20Cecilia%2C%20vorrei%20informazioni%20sui%20tuoi%20corsi%20di%20yoga' },
       { label: 'Instagram', value: '@cecilia_tanzi_yoga', href: 'https://www.instagram.com/cecilia_tanzi_yoga/' },
-      { label: 'Sedi', value: 'Oggiono · Pontida · La Valletta Brianza (LC)', href: null },
+      { label: 'Sedi', value: 'Oggiono · Lecco · Pontida · La Valletta Brianza', href: null },
     ],
     form: {
       nameLabel: 'Nome',
