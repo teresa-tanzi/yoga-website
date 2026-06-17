@@ -24,11 +24,11 @@ export function ContattiPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <div className="max-w-2xl">
+      <div className="mx-auto max-w-2xl text-center">
         <span className="text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">
           {eyebrow}
         </span>
-        <h1 className="mt-3 text-balance font-serif text-4xl font-semibold text-foreground md:text-5xl">
+        <h1 className="mt-3 text-balance font-serif text-3xl font-semibold text-foreground md:text-4xl">
           {title}
         </h1>
         <p className="mt-4 leading-relaxed text-muted-foreground">{intro}</p>
