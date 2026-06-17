@@ -1,18 +1,17 @@
 import Image from 'next/image'
-import { Check } from 'lucide-react'
 import { siteContent } from '@/lib/site-content'
 
 export function ChiSonoPage() {
-  const { eyebrow, title, image, imageAlt, sections, philosophy } =
+  const { eyebrow, title, image, imageAlt, sections } =
     siteContent.chiSono
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <div className="max-w-2xl">
+      <div className="mx-auto max-w-2xl text-center">
         <span className="text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">
           {eyebrow}
         </span>
-        <h1 className="mt-3 font-serif text-4xl font-semibold text-foreground md:text-5xl">
+        <h1 className="mt-3 text-balance font-serif text-3xl font-semibold text-foreground md:text-4xl">
           {title}
         </h1>
       </div>
@@ -45,23 +44,9 @@ export function ChiSonoPage() {
             </div>
           ))}
 
-          {/* Box filosofia */}
-          <div className="rounded-2xl border border-border bg-card p-7">
-            <h3 className="font-serif text-xl font-semibold text-foreground">
-              {philosophy.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-secondary-foreground">
-              {philosophy.intro}
-            </p>
-            <ul className="mt-4 space-y-2.5">
-              {philosophy.points.map((p) => (
-                <li key={p} className="flex items-start gap-3 text-sm text-foreground/90">
-                  <Check className="mt-0.5 size-4 shrink-0 text-terracotta" />
-                  <span>{p}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="text-sm font-medium uppercase tracking-widest text-terracotta">
+            — {siteContent.brand.name}
+          </p>
         </div>
       </div>
     </section>

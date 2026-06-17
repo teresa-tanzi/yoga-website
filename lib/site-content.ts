@@ -25,31 +25,32 @@ export const siteContent = {
     hero: {
       image: '/images/hero-yoga-nature.jpg',
       imageAlt: 'Pratica di yoga nella natura alla luce dorata del mattino',
-      title: 'Trova il tuo spazio.\nRitrova il tuo equilibrio.',
+      title: 'Pratiche di Hatha, Vinyasa e Ashtanga Yoga',
       subtitle:
-        'Pratiche di Hatha, Vinyasa e Ashtanga Yoga tra Lecco e Brianza.',
+        'tra Lecco e Brianza',
       cta: 'Scopri i Corsi',
     },
     welcome: {
       eyebrow: 'La mia filosofia',
-      quote:
-        'Nelle mie lezioni non cerco la postura perfetta, ma la qualità dell\u2019esperienza. Ogni corpo è diverso e ogni persona porta con sé una storia unica.',
-      author: 'Cecilia Tanzi',
-      image: '/images/welcome-detail.png',
+      text: "Credo in una pratica accessibile, oltre l'età o la flessibilità. Nelle mie lezioni non cerco la postura perfetta, ma la qualità dell'esperienza. Troverai uno spazio sicuro e senza giudizio dove esplorare movimento e respiro, attraverso pratiche che uniscono la tradizione dello yoga alla scienza dell'anatomia, nel pieno rispetto del tuo corpo.",
+      image: '/images/welcome-detail.jpg',
       imageAlt: 'Mani in mudra di meditazione durante la pratica',
     },
     highlights: [
       {
         title: 'Tra Lecco e Brianza',
         text: 'Lezioni in studio e immerse nella natura, dai vigneti al lago.',
+        link: 'natura',
       },
       {
         title: 'Tre stili, un percorso',
         text: 'Hatha dinamico, Vinyasa fluido e Ashtanga tradizionale.',
+        link: 'stili',
       },
       {
         title: 'Approccio su misura',
         text: 'Adatto le pratiche al tuo corpo, al tuo respiro e alla tua storia.',
+        link: 'contatti',
       },
     ],
   },
@@ -74,7 +75,6 @@ export const siteContent = {
       },
     ],
     philosophy: {
-      title: 'La mia filosofia',
       intro: 'Lo yoga non è una performance, ma un ascolto. Le mie lezioni sono pensate per:',
       points: [
         'Ridurre lo stress e ritrovare calma mentale',
@@ -118,7 +118,7 @@ export const siteContent = {
 
   natura: {
     eyebrow: 'Dove insegno',
-    title: 'Le mie sedi nella natura',
+    title: 'Le mie sedi',
     intro:
       'La natura è il cuore del mio modo di insegnare. Ogni luogo offre un\u2019esperienza unica, tra terra, acqua e profumi.',
     places: [
@@ -147,10 +147,10 @@ export const siteContent = {
         mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6',
       },
       {
-        name: 'Tra Lavanda e Rosmarino',
+        name: 'Yoga al Tramonto',
         location: 'Az. Agr. Dattilo Elisa',
         text: "Il venerdì sera collaboro con Azienda Agricola Dattilo Elisa, una realtà del territorio impegnata nella valorizzazione delle coltivazioni locali.\n\nLe lezioni si svolgono all’aperto, tra filari di lavanda, rosmarino e altre essenze aromatiche, creando un’esperienza multisensoriale che coinvolge movimento, respirazione e percezione dell’ambiente circostante.\n\nI profumi della campagna, la luce del tramonto e il contatto diretto con la terra rendono ogni incontro un’occasione per rallentare, ascoltarsi e ritrovare benessere in modo semplice e naturale.\n\nLe pratiche sono aperte a tutti i livelli e rappresentano un’opportunità per vivere lo yoga in un contesto autentico e immerso nella natura.",
-        image: '/images/lavender-yoga.webp',
+        image: '/images/lavender-yoga.jpg',
         imageAlt: 'Yoga serale tra campi di lavanda e rosmarino al tramonto',
         mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
       },
@@ -166,7 +166,7 @@ export const siteContent = {
     schedule: [
       { day: 'Martedì', time: '20:15 - 21.15', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
       { day: 'Giovedì', time: '20:00 - 21:00', style: 'Hata Yoga Dinamico', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
-      { day: 'Venerdì', time: '20:00 - 21:00', style: 'Yoga nella Natura', place: 'Az. Agr. Dattilo Elisa · La Valletta Brianza', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
+      { day: 'Venerdì', time: '20:00 - 21:00', style: 'Yoga al Tramonto', place: 'Az. Agr. Dattilo Elisa · La Valletta Brianza', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
       { day: 'Sabato', time: '10:00 - 11:00', style: 'Yoga tra i Vigneti', place: 'Polisena · Pontida', mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9' },
       { day: 'Domenica', time: '09:30 - 10:30', style: 'Hatha Yoga al Lago', place: 'Kayak · Oggiono', mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6' },
     ],
@@ -178,7 +178,7 @@ export const siteContent = {
         badge: 'Progetto 2026',
         title: 'Yoga per i giovani al Cubo³ di Lecco',
         when: 'Da settembre 2026',
-               text: "Da settembre inizierà una nuova e importante collaborazione con alCUBO³, il nuovo hub giovanile nato all'interno del Centro Civico Pertini di Lecco grazie a un progetto condiviso tra Comune, associazioni e realtà del territorio. Lo spazio è stato pensato come un luogo aperto in cui i giovani possano incontrarsi, sviluppare idee, partecipare ad attività culturali, sportive e sociali e sentirsi parte attiva della comunità.\n\nAll'interno di questo progetto collaborerò insieme ad altri insegnanti volontari per proporre attività yoga dedicate ai giovani della città.\n\nL'obiettivo è semplice ma ambizioso: rendere lo yoga accessibile alle nuove generazioni, offrendo uno spazio in cui rallentare, imparare ad ascoltarsi, gestire lo stress e sviluppare maggiore consapevolezza di sé.\n\nCredo profondamente che questa disciplina possa rappresentare uno strumento prezioso per i ragazzi e le ragazze di oggi, aiutandoli a coltivare equilibrio, presenza e benessere in una fase della vita ricca di cambiamenti e sfide.\n\nPartecipare a questo progetto significa per me contribuire alla costruzione di una comunità più attenta alla salute, alle relazioni e alla crescita personale, mettendo lo yoga al servizio del territorio e delle persone che lo abitano.",      },
+               text: "Da settembre inizierà una nuova e importante collaborazione con alCUBO³, il nuovo hub giovanile nato all'interno del Centro Civico Pertini di Lecco grazie a un progetto condiviso tra Comune, associazioni e realtà del territorio. Lo spazio è stato pensato come un luogo aperto in cui i giovani possano incontrarsi, sviluppare idee, partecipare ad attività culturali, sportive e sociali e sentirsi parte attiva della comunità.\n\nAll'interno di questo progetto collaborerò insieme ad altri insegnanti per proporre attività yoga dedicate ai giovani della città.\n\nL'obiettivo è semplice ma ambizioso: rendere lo yoga accessibile alle nuove generazioni, offrendo uno spazio in cui rallentare, imparare ad ascoltarsi, gestire lo stress e sviluppare maggiore consapevolezza di sé.\n\nCredo profondamente che questa disciplina possa rappresentare uno strumento prezioso per i ragazzi e le ragazze di oggi, aiutandoli a coltivare equilibrio, presenza e benessere in una fase della vita ricca di cambiamenti e sfide.\n\nPartecipare a questo progetto significa per me contribuire alla costruzione di una comunità più attenta alla salute, alle relazioni e alla crescita personale, mettendo lo yoga al servizio del territorio e delle persone che lo abitano.",      },
     ],
   },
 
@@ -214,7 +214,7 @@ export const siteContent = {
       { label: 'Email', value: 'cecilia_tanzi@yahoo.it', href: 'mailto:cecilia_tanzi@yahoo.it' },
       { label: 'WhatsApp', value: '+39 348 984 2081', href: 'https://wa.me/393489842081?text=Ciao%20Cecilia%2C%20vorrei%20informazioni%20sui%20tuoi%20corsi%20di%20yoga' },
       { label: 'Instagram', value: '@cecilia_tanzi_yoga', href: 'https://www.instagram.com/cecilia_tanzi_yoga/' },
-      { label: 'Sedi', value: 'Oggiono · Lecco · Pontida · La Valletta Brianza (LC)', href: null },
+      { label: 'Sedi', value: 'Oggiono · Lecco · Pontida · La Valletta Brianza', href: null },
     ],
     form: {
       nameLabel: 'Nome',

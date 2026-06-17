@@ -1,8 +1,10 @@
 import Image from 'next/image'
+import { Check } from 'lucide-react'
 import { siteContent, type PageId } from '@/lib/site-content'
 
 export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
   const { hero, welcome, highlights } = siteContent.home
+  const { philosophy } = siteContent.chiSono
 
   return (
     <div className="animate-in fade-in duration-700">
@@ -28,7 +30,7 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
             {hero.subtitle}
           </p>
           <button
-            onClick={() => goTo('stili')}
+            onClick={() => goTo('calendario')}
             className="mt-9 rounded-full bg-terracotta px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-lg transition-all hover:bg-terracotta-dark hover:shadow-xl"
           >
             {hero.cta}
@@ -36,10 +38,10 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
         </div>
       </section>
 
-      {/* Welcome / quote */}
+      {/* Welcome / filosofia */}
       <section className="bg-background px-6 py-20 md:py-28">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-[1fr_1.3fr]">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+        <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1fr_1.3fr]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:sticky md:top-28 md:self-start">
             <Image
               src={welcome.image || '/placeholder.svg'}
               alt={welcome.imageAlt}
@@ -48,17 +50,32 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
             />
           </div>
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-terracotta">
+            <h2 className="font-serif text-2xl font-semibold text-foreground">
               {welcome.eyebrow}
-            </span>
-            <blockquote className="mt-5 text-balance font-serif text-2xl font-medium leading-snug text-foreground md:text-3xl">
-              {'\u201C'}
-              {welcome.quote}
-              {'\u201D'}
-            </blockquote>
-            <p className="mt-5 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-              — {welcome.author}
-            </p>
+            </h2>
+            <div className="mt-5 flex flex-col gap-4">
+              {welcome.text.split('\n\n').map((p, i) => (
+                <p key={i} className="leading-relaxed text-muted-foreground">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="mt-8 rounded-2xl border border-border bg-card p-7">
+              <h3 className="font-serif text-xl font-semibold text-foreground">
+                {philosophy.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-secondary-foreground">
+                {philosophy.intro}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {philosophy.points.map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-sm text-foreground/90">
+                    <Check className="mt-0.5 size-4 shrink-0 text-terracotta" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -67,9 +84,10 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
       <section className="bg-background px-6 pb-20">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
           {highlights.map((h) => (
-            <div
+            <button
               key={h.title}
-              className="rounded-2xl border border-border/70 bg-card p-7 text-center"
+              onClick={() => goTo(h.link as PageId)}
+              className="rounded-2xl border border-border/70 bg-card p-7 text-center transition-all hover:border-terracotta/50 hover:shadow-md"
             >
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 {h.title}
@@ -77,7 +95,7 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {h.text}
               </p>
-            </div>
+            </button>
           ))}
         </div>
       </section>
