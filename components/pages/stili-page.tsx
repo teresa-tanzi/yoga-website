@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { siteContent } from '@/lib/site-content'
+import { siteContent, type PageId } from '@/lib/site-content'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-export function StiliPage() {
+export function StiliPage({ goTo }: { goTo: (page: PageId) => void }) {
   const { eyebrow, title, intro, cards } = siteContent.stili
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
@@ -88,6 +88,16 @@ export function StiliPage() {
             </article>
           )
         })}
+      </div>
+
+      <div className="mt-20 text-center">
+        <p className="text-sm text-muted-foreground">Vuoi unirti a una delle mie pratiche?</p>
+        <button
+          onClick={() => goTo('calendario')}
+          className="mt-3 rounded-full bg-terracotta px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-lg transition-all hover:bg-terracotta-dark hover:shadow-xl"
+        >
+          Scopri le lezioni
+        </button>
       </div>
     </section>
   )

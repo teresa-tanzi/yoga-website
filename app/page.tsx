@@ -27,7 +27,7 @@ export default function Page() {
       <main className="flex-1 pt-16">
         {currentPage === 'home' && <HomePage goTo={goTo} />}
         {currentPage === 'chi-sono' && <ChiSonoPage />}
-        {currentPage === 'stili' && <StiliPage />}
+        {currentPage === 'stili' && <StiliPage goTo={goTo} />}
         {currentPage === 'natura' && <NaturaPage goTo={goTo} />}
         {currentPage === 'calendario' && <CalendarioPage />}
         {currentPage === 'faq' && <FaqPage />}
