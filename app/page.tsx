@@ -29,7 +29,7 @@ export default function Page() {
         {currentPage === 'chi-sono' && <ChiSonoPage />}
         {currentPage === 'stili' && <StiliPage goTo={goTo} />}
         {currentPage === 'natura' && <NaturaPage goTo={goTo} />}
-        {currentPage === 'calendario' && <CalendarioPage />}
+        {currentPage === 'calendario' && <CalendarioPage goTo={goTo} />}
         {currentPage === 'faq' && <FaqPage />}
         {currentPage === 'contatti' && <ContattiPage />}
       </main>

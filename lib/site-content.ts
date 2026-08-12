@@ -164,11 +164,34 @@ export const siteContent = {
       'Una settimana di pratica tra studio e natura. Scegli il giorno e lo stile che senti più tuo.',
     scheduleTitle: 'Orari settimanali',
     schedule: [
-      { day: 'Martedì', time: '20:15 - 21.15', style: 'Vinyasa Yoga', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
-      { day: 'Giovedì', time: '20:00 - 21:00', style: 'Hata Yoga Dinamico', place: 'Ayre Studio · Oggiono', mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6' },
-      { day: 'Venerdì', time: '20:00 - 21:00', style: 'Yoga al Tramonto', place: 'Az. Agr. Dattilo Elisa · La Valletta Brianza', mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5' },
-      { day: 'Sabato', time: '10:00 - 11:00', style: 'Yoga tra i Vigneti', place: 'Polisena · Pontida', mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9' },
-      { day: 'Domenica', time: '09:30 - 10:30', style: 'Hatha Yoga al Lago', place: 'Kayak · Oggiono', mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6' },
+      {
+        place: 'Ayre Studio',
+        location: 'Oggiono',
+        mapsUrl: 'https://maps.app.goo.gl/ANdae8GyCWyb4JfL7',
+        classes: [
+          { day: 'Martedì', style: 'Vinyasa Yoga', time: '20:15 - 21:15' },
+          { day: 'Giovedì', style: 'Hatha Yoga', time: '20:00 - 21:00' },
+          { day: 'Domenica', style: 'Hatha Yoga', time: '09:30 - 10:30' },
+        ],
+      },
+      {
+        place: 'Luma',
+        location: 'Valmadrera',
+        mapsUrl: 'https://maps.app.goo.gl/wWbiEkGwH74mJDKR7',
+        classes: [
+          { day: 'Mercoledì', style: 'Vinyasa Yoga', time: '18:00 - 19:00' },
+          { day: 'Mercoledì', style: 'Ashtanga Yoga', time: '19:00 - 20:00' },
+          { day: 'Mercoledì', style: 'Ginnastica per uomini', time: '20:00 - 21:00' },
+        ],
+      },
+      {
+        place: 'alCUBO',
+        location: 'Lecco',
+        mapsUrl: 'https://maps.app.goo.gl/BQagw3RipGVWqXSs6',
+        classes: [
+          { day: 'Venerdì', style: 'Vinyasa Yoga', time: '19:00 - 20:00' },
+        ],
+      },
     ],
     eventiTitle: 'Eventi',
     eventiIntro:
@@ -214,7 +237,7 @@ export const siteContent = {
       { label: 'Email', value: 'cecilia_tanzi@yahoo.it', href: 'mailto:cecilia_tanzi@yahoo.it' },
       { label: 'WhatsApp', value: '+39 348 984 2081', href: 'https://wa.me/393489842081?text=Ciao%20Cecilia%2C%20vorrei%20informazioni%20sui%20tuoi%20corsi%20di%20yoga' },
       { label: 'Instagram', value: '@cecilia_tanzi_yoga', href: 'https://www.instagram.com/cecilia_tanzi_yoga/' },
-      { label: 'Sedi', value: 'Oggiono · Lecco · Pontida · La Valletta Brianza', href: null },
+      { label: 'Sedi', value: 'Oggiono · Lecco · Valmadrera · Pontida · La Valletta Brianza', href: null },
     ],
     form: {
       nameLabel: 'Nome',

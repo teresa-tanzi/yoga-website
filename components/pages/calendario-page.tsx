@@ -1,9 +1,9 @@
 import { Sparkles, CalendarDays } from 'lucide-react'
-import { siteContent } from '@/lib/site-content'
+import { siteContent, type PageId } from '@/lib/site-content'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-export function CalendarioPage() {
+export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
   const {
     eyebrow,
     title,
@@ -27,58 +27,57 @@ export function CalendarioPage() {
             {scheduleTitle}
           </h3>
         </div>
-        <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
-          <table className="w-full text-left text-sm">
-            <thead>
-              <tr className="bg-muted text-foreground">
-                <th className="px-5 py-4 font-semibold">Giorno</th>
-                <th className="px-5 py-4 font-semibold">Orario</th>
-                <th className="px-5 py-4 font-semibold">Stile</th>
-                <th className="hidden px-5 py-4 font-semibold sm:table-cell">
-                  Luogo
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {schedule.map((row, i) => (
-                <tr
-                  key={`${row.day}-${row.time}`}
-                  className={cn(
-                    'border-t border-border',
-                    i % 2 === 0 ? 'bg-muted/40' : 'bg-transparent',
-                  )}
+        <div className="mt-6 flex flex-col gap-8">
+          {schedule.map((sede) => (
+            <div
+              key={sede.place}
+              className="overflow-hidden rounded-2xl border border-border bg-card"
+            >
+              <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-border bg-muted px-5 py-4">
+                <h4 className="font-serif text-lg font-semibold text-foreground">
+                  {sede.place} <span className="font-sans text-sm font-normal text-muted-foreground">· {sede.location}</span>
+                </h4>
+                <a
+                  href={sede.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-muted-foreground underline underline-offset-2 hover:text-terracotta"
                 >
-                  <td className="px-5 py-4 font-medium text-foreground">
-                    {row.day}
-                  </td>
-                  <td className="px-5 py-4 font-semibold text-terracotta">
-                    {row.time}
-                  </td>
-                  <td className="px-5 py-4 text-foreground/90">
-                    {row.style}
-                    <a
-                      href={row.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-0.5 block text-xs text-muted-foreground underline underline-offset-2 hover:text-terracotta sm:hidden"
+                  Apri in Maps
+                </a>
+              </div>
+              <table className="w-full table-fixed text-left text-sm">
+                <thead>
+                  <tr className="text-foreground">
+                    <th className="w-[28%] px-5 py-3 font-semibold">Giorno</th>
+                    <th className="w-[42%] px-5 py-3 font-semibold">Stile</th>
+                    <th className="w-[30%] px-5 py-3 font-semibold">Orario</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sede.classes.map((row, i) => (
+                    <tr
+                      key={`${row.day}-${row.style}`}
+                      className={cn(
+                        'border-t border-border',
+                        i % 2 === 0 ? 'bg-muted/40' : 'bg-transparent',
+                      )}
                     >
-                      {row.place}
-                    </a>
-                  </td>
-                  <td className="hidden px-5 py-4 sm:table-cell">
-                    <a
-                      href={row.mapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground underline underline-offset-2 transition-colors hover:text-terracotta"
-                    >
-                      {row.place}
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                      <td className="px-5 py-4 font-medium text-foreground">
+                        {row.day}
+                      </td>
+                      <td className="px-5 py-4 text-foreground/90">
+                        {row.style}
+                      </td>
+                      <td className="px-5 py-4 font-semibold text-terracotta">
+                        {row.time}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -111,6 +110,16 @@ export function CalendarioPage() {
             </article>
           ))}
         </div>
+      </div>
+
+      <div className="mt-20 text-center">
+        <p className="text-sm text-muted-foreground">Vuoi prenotare la tua lezione di prova?</p>
+        <button
+          onClick={() => goTo('contatti')}
+          className="mt-3 rounded-full bg-terracotta px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-lg transition-all hover:bg-terracotta-dark hover:shadow-xl"
+        >
+          Contattami
+        </button>
       </div>
     </section>
   )
