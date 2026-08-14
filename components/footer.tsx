@@ -27,7 +27,7 @@ export function Footer({ goTo }: { goTo: (page: PageId) => void }) {
         </nav>
       </div>
       <div className="mx-auto mt-10 max-w-6xl border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {siteContent.brand.name} · {siteContent.brand.discipline} · Sito realizzato da{' '}
+        © {new Date().getFullYear()} {siteContent.brand.name} · {siteContent.brand.discipline} · Sito web realizzato da{' '}
         <a
           href="https://github.com/teresa-tanzi"
           target="_blank"

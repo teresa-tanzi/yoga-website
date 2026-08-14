@@ -16,6 +16,7 @@ export const siteContent = {
     { id: 'chi-sono', label: 'Chi sono' },
     { id: 'stili', label: 'Stili di Yoga' },
     { id: 'natura', label: 'Dove insegno' },
+    { id: 'galleria', label: 'Galleria' },
     { id: 'calendario', label: 'Calendario & Eventi' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contatti', label: 'Contatti' },
@@ -153,6 +154,100 @@ export const siteContent = {
         image: '/images/lavender-yoga.jpg',
         imageAlt: 'Yoga serale tra campi di lavanda e rosmarino al tramonto',
         mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
+      },
+    ],
+  },
+
+  galleria: {
+    eyebrow: 'Galleria',
+    title: 'Immagini dalla pratica',
+    intro:
+      'Un piccolo assaggio visivo delle lezioni, degli spazi e dei luoghi in cui insegno.',
+    photos: [
+      {
+        image: '/images/gallery-portrait-1.jpeg',
+        imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
+        caption: 'Cecilia Tanzi, insegnante di yoga',
+      },
+      {
+        image: '/images/gallery-portrait-2.jpeg',
+        imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
+        caption: 'Cecilia Tanzi, insegnante di yoga',
+      },
+      {
+        image: '/images/gallery-portrait-3.jpeg',
+        imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
+        caption: 'Cecilia Tanzi, insegnante di yoga',
+      },
+      {
+        image: '/images/gallery-ayre-yoga-1.jpeg',
+        imageAlt: 'Lezione di yoga presso Ayre Studio a Oggiono',
+        caption: 'Lezione presso Ayre Studio, Oggiono',
+      },
+      {
+        image: '/images/gallery-ayre-yoga-2.jpeg',
+        imageAlt: 'Lezione di yoga presso Ayre Studio a Oggiono',
+        caption: 'Lezione presso Ayre Studio, Oggiono',
+      },
+      {
+        image: '/images/gallery-ayre-yoga-3.jpeg',
+        imageAlt: 'Lezione di yoga presso Ayre Studio a Oggiono',
+        caption: 'Lezione presso Ayre Studio, Oggiono',
+      },
+      {
+        image: '/images/gallery-ayre-yoga-4.jpeg',
+        imageAlt: 'Lezione di yoga presso Ayre Studio a Oggiono',
+        caption: 'Lezione presso Ayre Studio, Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-1.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-2.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-3.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-4.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-5.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-6.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lake-yoga-7.jpeg',
+        imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
+        caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+      },
+      {
+        image: '/images/gallery-lavender-yoga-1.jpeg',
+        imageAlt: 'Yoga tra i campi di lavanda dell’Azienda Agricola Dattilo Elisa',
+        caption: 'Yoga al tramonto, Az. Agr. Dattilo Elisa',
+      },
+      {
+        image: '/images/gallery-lavender-yoga-2.jpeg',
+        imageAlt: 'Yoga tra i campi di lavanda dell’Azienda Agricola Dattilo Elisa',
+        caption: 'Yoga al tramonto, Az. Agr. Dattilo Elisa',
+      },
+      {
+        image: '/images/gallery-lavender-yoga-3.jpeg',
+        imageAlt: 'Yoga tra i campi di lavanda dell’Azienda Agricola Dattilo Elisa',
+        caption: 'Yoga al tramonto, Az. Agr. Dattilo Elisa',
       },
     ],
   },

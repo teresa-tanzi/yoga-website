@@ -8,6 +8,7 @@ import { HomePage } from '@/components/pages/home-page'
 import { ChiSonoPage } from '@/components/pages/chi-sono-page'
 import { StiliPage } from '@/components/pages/stili-page'
 import { NaturaPage } from '@/components/pages/natura-page'
+import { GalleriaPage } from '@/components/pages/galleria-page'
 import { CalendarioPage } from '@/components/pages/calendario-page'
 import { FaqPage } from '@/components/pages/faq-page'
 import { ContattiPage } from '@/components/pages/contatti-page'
@@ -29,6 +30,7 @@ export default function Page() {
         {currentPage === 'chi-sono' && <ChiSonoPage />}
         {currentPage === 'stili' && <StiliPage goTo={goTo} />}
         {currentPage === 'natura' && <NaturaPage goTo={goTo} />}
+        {currentPage === 'galleria' && <GalleriaPage />}
         {currentPage === 'calendario' && <CalendarioPage goTo={goTo} />}
         {currentPage === 'faq' && <FaqPage />}
         {currentPage === 'contatti' && <ContattiPage />}
