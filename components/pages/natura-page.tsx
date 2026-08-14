@@ -44,9 +44,23 @@ export function NaturaPage({ goTo }: { goTo: (page: PageId) => void }) {
                     {place.location}
                   </span>
                 </a>
-                <h3 className="mt-3 font-serif text-3xl font-semibold text-foreground">
-                  {place.name}
-                </h3>
+                <div className="mt-3 flex flex-wrap items-center gap-2.5">
+                  <h3 className="font-serif text-3xl font-semibold text-foreground">
+                    {place.name}
+                  </h3>
+                  {place.active !== undefined && (
+                    <span
+                      className={cn(
+                        'rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide',
+                        place.active
+                          ? 'bg-sage-soft text-sage'
+                          : 'bg-muted-foreground/15 text-muted-foreground',
+                      )}
+                    >
+                      {place.active ? 'Corsi attivi' : 'Corsi non attivi'}
+                    </span>
+                  )}
+                </div>
                 <div className="mt-4 flex flex-col gap-3">
                   {place.text.split('\n\n').map((p, i) => (
                     <p key={i} className="leading-relaxed text-muted-foreground">{p}</p>

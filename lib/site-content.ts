@@ -130,6 +130,7 @@ export const siteContent = {
         image: '/images/ayre-studio.jpeg',
         imageAlt: 'Interno luminoso dello studio Ayre a Oggiono',
         mapsUrl: 'https://maps.app.goo.gl/Ckpb5Nd1xywp6oUf6',
+        active: true,
       },
       {
         name: 'Yoga tra i Vigneti',
@@ -138,6 +139,7 @@ export const siteContent = {
         image: '/images/vineyard-yoga.jpg',
         imageAlt: 'Pratica di yoga tra i vigneti di Polisena',
         mapsUrl: 'https://maps.app.goo.gl/sNvWgWoC2YtrSL6k9',
+        active: false,
       },
       {
         name: 'Hatha Yoga sul Lago',
@@ -146,16 +148,44 @@ export const siteContent = {
         image: '/images/lake-kayak-yoga.jpeg',
         imageAlt: 'Hatha yoga sul Lago di Annone con kayak sulla riva',
         mapsUrl: 'https://maps.app.goo.gl/nRQu9QmpyV8f16zG6',
+        active: false,
       },
       {
         name: 'Yoga al Tramonto',
         location: 'Az. Agr. Dattilo Elisa',
         text: "Il venerdì sera collaboro con Azienda Agricola Dattilo Elisa, una realtà del territorio impegnata nella valorizzazione delle coltivazioni locali.\n\nLe lezioni si svolgono all’aperto, tra filari di lavanda, rosmarino e altre essenze aromatiche, creando un’esperienza multisensoriale che coinvolge movimento, respirazione e percezione dell’ambiente circostante.\n\nI profumi della campagna, la luce del tramonto e il contatto diretto con la terra rendono ogni incontro un’occasione per rallentare, ascoltarsi e ritrovare benessere in modo semplice e naturale.\n\nLe pratiche sono aperte a tutti i livelli e rappresentano un’opportunità per vivere lo yoga in un contesto autentico e immerso nella natura.",
-        image: '/images/lavender-yoga.jpg',
+        image: '/images/gallery-lavender-yoga-2.jpeg',
         imageAlt: 'Yoga serale tra campi di lavanda e rosmarino al tramonto',
         mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
+        active: false,
       },
-    ],
+      {
+        name: 'Luma',
+        location: 'Valmadrera',
+        text: "Il mercoledì propongo lezioni di Vinyasa Yoga, Ashtanga Yoga e Ginnastica per uomini presso Luma, a Valmadrera.\n\nMaggiori dettagli arriveranno a breve.",
+        image: '',
+        imageAlt: 'Spazio Luma a Valmadrera',
+        mapsUrl: 'https://maps.app.goo.gl/wWbiEkGwH74mJDKR7',
+        active: true,
+      },
+      {
+        name: 'alCUBO',
+        location: 'Lecco',
+        text: "Il venerdì sera propongo una lezione di Vinyasa Yoga presso alCUBO³, il nuovo hub giovanile all'interno del Centro Civico Pertini di Lecco.\n\nMaggiori dettagli arriveranno a breve.",
+        image: '',
+        imageAlt: 'alCUBO³ a Lecco',
+        mapsUrl: 'https://maps.app.goo.gl/BQagw3RipGVWqXSs6',
+        active: true,
+      },
+    ] as {
+      name: string
+      location: string
+      text: string
+      image: string
+      imageAlt: string
+      mapsUrl: string
+      active?: boolean
+    }[],
   },
 
   galleria: {
@@ -291,13 +321,7 @@ export const siteContent = {
     eventiTitle: 'Eventi',
     eventiIntro:
       'Progetti speciali e appuntamenti dedicati, oltre alla pratica settimanale.',
-    eventi: [
-      {
-        badge: 'Progetto 2026',
-        title: 'Yoga per i giovani al Cubo³ di Lecco',
-        when: 'Da settembre 2026',
-               text: "Da settembre inizierà una nuova e importante collaborazione con alCUBO³, il nuovo hub giovanile nato all'interno del Centro Civico Pertini di Lecco grazie a un progetto condiviso tra Comune, associazioni e realtà del territorio. Lo spazio è stato pensato come un luogo aperto in cui i giovani possano incontrarsi, sviluppare idee, partecipare ad attività culturali, sportive e sociali e sentirsi parte attiva della comunità.\n\nAll'interno di questo progetto collaborerò insieme ad altri insegnanti per proporre attività yoga dedicate ai giovani della città.\n\nL'obiettivo è semplice ma ambizioso: rendere lo yoga accessibile alle nuove generazioni, offrendo uno spazio in cui rallentare, imparare ad ascoltarsi, gestire lo stress e sviluppare maggiore consapevolezza di sé.\n\nCredo profondamente che questa disciplina possa rappresentare uno strumento prezioso per i ragazzi e le ragazze di oggi, aiutandoli a coltivare equilibrio, presenza e benessere in una fase della vita ricca di cambiamenti e sfide.\n\nPartecipare a questo progetto significa per me contribuire alla costruzione di una comunità più attenta alla salute, alle relazioni e alla crescita personale, mettendo lo yoga al servizio del territorio e delle persone che lo abitano.",      },
-    ],
+    eventi: [] as { badge: string; title: string; when: string; text: string }[],
   },
 
   faq: {

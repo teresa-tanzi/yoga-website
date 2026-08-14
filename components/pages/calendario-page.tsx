@@ -82,6 +82,7 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
       </div>
 
       {/* Eventi */}
+      {eventi.length > 0 && (
       <div className="mt-16">
         <SectionHeading title={eventiTitle} intro={eventiIntro} />
         <div className="mt-6 flex justify-center">
@@ -111,6 +112,7 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
           ))}
         </div>
       </div>
+      )}
 
       <div className="mt-20 text-center">
         <p className="text-sm text-muted-foreground">Vuoi prenotare la tua lezione di prova?</p>
