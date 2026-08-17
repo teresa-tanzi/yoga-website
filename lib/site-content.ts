@@ -198,16 +198,19 @@ export const siteContent = {
         image: '/images/gallery-portrait-1.jpeg',
         imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
         caption: 'Cecilia Tanzi, insegnante di yoga',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-portrait-2.jpeg',
         imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
         caption: 'Cecilia Tanzi, insegnante di yoga',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-portrait-3.jpeg',
         imageAlt: 'Ritratto di Cecilia Tanzi, insegnante di yoga',
         caption: 'Cecilia Tanzi, insegnante di yoga',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-ayre-yoga-1.jpeg',
@@ -233,36 +236,43 @@ export const siteContent = {
         image: '/images/gallery-lake-yoga-1.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-2.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-3.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-4.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-5.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-6.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lake-yoga-7.jpeg',
         imageAlt: 'Yoga sul Lago di Annone presso il Kayak Oggiono',
         caption: 'Hatha Yoga sul lago, Kayak Oggiono',
+        credit: { name: 'Marco Leone', url: 'https://www.instagram.com/marcoleone.ph/' },
       },
       {
         image: '/images/gallery-lavender-yoga-1.jpeg',
@@ -279,7 +289,12 @@ export const siteContent = {
         imageAlt: 'Yoga tra i campi di lavanda dell’Azienda Agricola Dattilo Elisa',
         caption: 'Yoga al tramonto, Az. Agr. Dattilo Elisa',
       },
-    ],
+    ] as {
+      image: string
+      imageAlt: string
+      caption: string
+      credit?: { name: string; url: string }
+    }[],
   },
 
   calendario: {

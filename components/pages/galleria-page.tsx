@@ -106,10 +106,23 @@ export function GalleriaPage() {
                 className="object-contain"
               />
             </div>
-            {active.caption && (
-              <p key={`caption-${openIndex}`} className="animate-in fade-in text-center text-sm text-white/90 duration-300">
-                {active.caption}
-              </p>
+            {(active.caption || active.credit) && (
+              <div key={`caption-${openIndex}`} className="animate-in fade-in text-center duration-300">
+                {active.caption && (
+                  <p className="text-sm text-white/90">{active.caption}</p>
+                )}
+                {active.credit && (
+                  <a
+                    href={active.credit.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-1 inline-block text-xs text-white/60 underline underline-offset-2 hover:text-white"
+                  >
+                    Foto di {active.credit.name}
+                  </a>
+                )}
+              </div>
             )}
           </div>
 
