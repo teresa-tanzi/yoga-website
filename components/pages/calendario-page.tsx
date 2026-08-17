@@ -65,6 +65,7 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
                     >
                       <td className="px-5 py-4 font-medium text-foreground">
                         {row.day}
+                        {row.note && '*'}
                       </td>
                       <td className="px-5 py-4 text-foreground/90">
                         {row.style}
@@ -76,6 +77,15 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
                   ))}
                 </tbody>
               </table>
+              {sede.classes.some((row) => row.note) && (
+                <div className="border-t border-border px-5 py-3 text-xs text-muted-foreground">
+                  {sede.classes
+                    .filter((row) => row.note)
+                    .map((row) => (
+                      <p key={row.note}>* {row.note}</p>
+                    ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

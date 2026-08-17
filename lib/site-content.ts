@@ -133,9 +133,9 @@ export const siteContent = {
         active: true,
       },
       {
-        name: 'Yoga al Tramonto',
-        location: 'Az. Agr. Dattilo Elisa',
-        text: "Collaboro con Azienda Agricola Dattilo Elisa, una realtà del territorio impegnata nella valorizzazione delle coltivazioni locali.\n\nLe lezioni si svolgono all’aperto, tra filari di lavanda, rosmarino e altre essenze aromatiche, creando un’esperienza multisensoriale che coinvolge movimento, respirazione e percezione dell’ambiente circostante.\n\nI profumi della campagna, la luce del tramonto e il contatto diretto con la terra rendono ogni incontro un’occasione per rallentare, ascoltarsi e ritrovare benessere in modo semplice e naturale.\n\nLe pratiche sono aperte a tutti i livelli e rappresentano un’opportunità per vivere lo yoga in un contesto autentico e immerso nella natura.",
+        name: 'Az. Agr. Dattilo Elisa',
+        location: 'La Valletta Brianza',
+        text: "Collaboro con Azienda Agricola Dattilo Elisa, una realtà del territorio impegnata nella valorizzazione delle coltivazioni locali.\n\nLe lezioni si svolgono all’aperto, tra filari di lavanda, rosmarino e altre essenze aromatiche, creando un’esperienza multisensoriale che coinvolge movimento, respirazione e percezione dell’ambiente circostante.\n\nI profumi della campagna, la luce del tramonto e il contatto diretto con la terra rendono ogni incontro un’occasione per rallentare, ascoltarsi e ritrovare benessere in modo semplice e naturale.\n\nLe pratiche sono aperte a tutti i livelli e rappresentano un’opportunità per vivere lo yoga in un contesto autentico e immerso nella natura.\n\nIl corso è attivo per i mesi di settembre e ottobre; riprenderà poi in primavera.",
         image: '/images/dattilo-elisa-farm.jpg',
         imageAlt: 'Lezione di yoga presso l’Azienda Agricola Dattilo Elisa',
         mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
@@ -160,8 +160,8 @@ export const siteContent = {
         active: true,
       },
       {
-        name: 'Yoga tra i Vigneti',
-        location: 'Polisena',
+        name: 'Agriturismo Polisena',
+        location: 'Pontida',
         text: "Ogni sabato mattina collaboro con Polisena – L’Altro Agriturismo, una realtà legata alla sostenibilità, all’agricoltura biologica e all’ospitalità.\n\nLe lezioni si svolgono tra i vigneti che circondano la struttura, offrendo la possibilità di iniziare la giornata immersi nella natura attraverso una pratica di yoga accessibile e rigenerante.\n\nAl termine dell’esperienza viene proposto un pranzo leggero a base vegetale, preparato con ingredienti stagionali e del territorio.",
         image: '/images/vineyard-yoga.jpg',
         imageAlt: 'Pratica di yoga tra i vigneti di Polisena',
@@ -169,8 +169,8 @@ export const siteContent = {
         active: false,
       },
       {
-        name: 'Hatha Yoga sul Lago',
-        location: 'Kayak Oggiono',
+        name: 'Kayak',
+        location: 'Oggiono',
         text: "Durante la stagione estiva conduco lezioni di Hatha Yoga Dinamico la domenica mattina presso il Kayak Oggiono.\n\nPraticare yoga all'aperto, affacciati sul suggestivo scenario del Lago di Annone, offre un'esperienza unica che unisce movimento, respirazione e contatto con la natura.\n\nIl silenzio del mattino, la luce che si riflette sull'acqua e il paesaggio circostante creano le condizioni ideali per rallentare, ritrovare energia e iniziare la giornata con equilibrio e serenità.\n\nLe lezioni sono accessibili a tutti i livelli e rappresentano un'occasione speciale per vivere lo yoga in un contesto naturale di grande bellezza.",
         image: '/images/lake-kayak-yoga.jpeg',
         imageAlt: 'Hatha yoga sul Lago di Annone con kayak sulla riva',
@@ -317,7 +317,20 @@ export const siteContent = {
           { day: 'Venerdì', style: 'Vinyasa Yoga', time: '19:00 - 20:00' },
         ],
       },
-    ],
+      {
+        place: 'Az. Agr. Dattilo Elisa',
+        location: 'La Valletta Brianza',
+        mapsUrl: 'https://maps.app.goo.gl/j87cvEfZAjj8mqYx5',
+        classes: [
+          { day: 'Sabato', style: 'Hatha Yoga', time: '14:00 - 15:00', note: 'Corso attivo a settembre e ottobre, riprende in primavera' },
+        ],
+      },
+    ] as {
+      place: string
+      location: string
+      mapsUrl: string
+      classes: { day: string; style: string; time: string; note?: string }[]
+    }[],
     eventiTitle: 'Eventi',
     eventiIntro:
       'Progetti speciali e appuntamenti dedicati, oltre alla pratica settimanale.',
