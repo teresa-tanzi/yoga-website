@@ -3,11 +3,13 @@ export function SectionHeading({
   title,
   intro,
   align = 'center',
+  as: Heading = 'h2',
 }: {
   eyebrow?: string
   title: string
   intro?: string
   align?: 'center' | 'left'
+  as?: 'h1' | 'h2'
 }) {
   return (
     <div
@@ -22,9 +24,9 @@ export function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className="mt-3 text-balance font-serif text-3xl font-semibold text-foreground md:text-4xl">
+      <Heading className="mt-3 text-balance font-serif text-3xl font-semibold text-foreground md:text-4xl">
         {title}
-      </h2>
+      </Heading>
       {intro && (
         <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
           {intro}

@@ -10,9 +10,26 @@ export function FaqPage() {
   const { eyebrow, title, items } = siteContent.faq
   const [open, setOpen] = useState<number | null>(0)
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  }
+
   return (
     <section className="mx-auto max-w-3xl px-6 py-20 md:py-28">
-      <SectionHeading eyebrow={eyebrow} title={title} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <SectionHeading as="h1" eyebrow={eyebrow} title={title} />
 
       <div className="mt-12 flex flex-col gap-3">
         {items.map((item, i) => {

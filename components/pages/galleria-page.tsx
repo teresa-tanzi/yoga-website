@@ -42,7 +42,7 @@ export function GalleriaPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
+      <SectionHeading as="h1" eyebrow={eyebrow} title={title} intro={intro} />
 
       <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5">
         {photos.map((photo, i) => (

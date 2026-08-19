@@ -6,13 +6,13 @@ import { siteContent, type PageId } from '@/lib/site-content'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-export function StiliPage({ goTo }: { goTo: (page: PageId) => void }) {
-  const { eyebrow, title, intro, cards } = siteContent.stili
+export function StiliDiYogaPage({ goTo }: { goTo: (page: PageId) => void }) {
+  const { eyebrow, title, intro, cards } = siteContent.stiliDiYoga
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
+      <SectionHeading as="h1" eyebrow={eyebrow} title={title} intro={intro} />
 
       <div className="mt-14 grid items-start gap-6 md:grid-cols-3">
         {cards.map((card) => {

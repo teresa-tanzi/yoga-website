@@ -14,8 +14,8 @@ export const siteContent = {
   nav: [
     { id: 'home', label: 'Home' },
     { id: 'chi-sono', label: 'Chi sono' },
-    { id: 'stili', label: 'Stili di Yoga' },
-    { id: 'natura', label: 'Dove insegno' },
+    { id: 'stili-di-yoga', label: 'Stili di Yoga' },
+    { id: 'dove-insegno', label: 'Dove insegno' },
     { id: 'galleria', label: 'Galleria' },
     { id: 'calendario', label: 'Calendario & Eventi' },
     { id: 'faq', label: 'FAQ' },
@@ -23,6 +23,11 @@ export const siteContent = {
   ],
 
   home: {
+    meta: {
+      title: 'Cecilia Tanzi · Yoga | Hatha, Vinyasa & Ashtanga tra Lecco e Brianza',
+      description:
+        'Pratiche di Hatha, Vinyasa e Ashtanga Yoga con Cecilia Tanzi. Lezioni in studio e nella natura tra Lecco e Brianza: trova il tuo spazio, ritrova il tuo equilibrio.',
+    },
     hero: {
       image: '/images/hero-yoga-nature.jpg',
       imageAlt: 'Pratica di yoga nella natura alla luce dorata del mattino',
@@ -41,12 +46,12 @@ export const siteContent = {
       {
         title: 'Tra Lecco e Brianza',
         text: 'Lezioni in studio e immerse nella natura, dai vigneti al lago.',
-        link: 'natura',
+        link: 'dove-insegno',
       },
       {
         title: 'Tre stili, un percorso',
         text: 'Hatha dinamico, Vinyasa fluido e Ashtanga tradizionale.',
-        link: 'stili',
+        link: 'stili-di-yoga',
       },
       {
         title: 'Approccio su misura',
@@ -57,6 +62,11 @@ export const siteContent = {
   },
 
   chiSono: {
+    meta: {
+      title: 'Chi sono | Cecilia Tanzi Yoga',
+      description:
+        'La storia di Cecilia Tanzi, insegnante di Hatha, Vinyasa e Ashtanga Yoga tra Lecco e Brianza. RYT-200, Diploma CONI.',
+    },
     eyebrow: 'La mia storia',
     title: 'Chi sono',
     image: '/images/instructor-portrait.jpg',
@@ -87,7 +97,12 @@ export const siteContent = {
     },
   },
 
-  stili: {
+  stiliDiYoga: {
+    meta: {
+      title: 'Stili di Yoga: Hatha, Vinyasa e Ashtanga | Cecilia Tanzi',
+      description:
+        'Scopri Hatha Yoga Dinamico, Vinyasa Yoga e Ashtanga Yoga con Cecilia Tanzi: tre pratiche per radicamento, fluidità e disciplina, tra Lecco e Brianza.',
+    },
     eyebrow: 'Le pratiche',
     title: 'Stili di Yoga',
     intro:
@@ -117,7 +132,12 @@ export const siteContent = {
     ],
   },
 
-  natura: {
+  doveInsegno: {
+    meta: {
+      title: 'Dove insegno: le sedi dei corsi | Cecilia Tanzi Yoga',
+      description:
+        'Le sedi dei corsi di yoga con Cecilia Tanzi tra Oggiono, Lecco, Valmadrera e La Valletta Brianza, in studio e nella natura.',
+    },
     eyebrow: 'Dove insegno',
     title: 'Le mie sedi',
     intro:
@@ -142,11 +162,11 @@ export const siteContent = {
         active: true,
       },
       {
-        name: 'Luma',
+        name: 'Luma Studio',
         location: 'Valmadrera',
-        text: "Il mercoledì propongo lezioni di Vinyasa Yoga, Ashtanga Yoga e Ginnastica per uomini presso Luma, a Valmadrera.\n\nMaggiori dettagli arriveranno a breve.",
+        text: "Il mercoledì propongo lezioni di Vinyasa Yoga, Ashtanga Yoga e Ginnastica per uomini presso Luma Studio, a Valmadrera.\n\nMaggiori dettagli arriveranno a breve.",
         image: '',
-        imageAlt: 'Spazio Luma a Valmadrera',
+        imageAlt: 'Spazio Luma Studio a Valmadrera',
         mapsUrl: 'https://maps.app.goo.gl/wWbiEkGwH74mJDKR7',
         active: true,
       },
@@ -189,6 +209,11 @@ export const siteContent = {
   },
 
   galleria: {
+    meta: {
+      title: 'Galleria foto | Cecilia Tanzi Yoga',
+      description:
+        'Immagini dalle lezioni di yoga di Cecilia Tanzi: studio, natura e momenti di pratica tra Lecco e Brianza.',
+    },
     eyebrow: 'Galleria',
     title: 'Immagini dalla pratica',
     intro:
@@ -298,6 +323,11 @@ export const siteContent = {
   },
 
   calendario: {
+    meta: {
+      title: 'Calendario e orari dei corsi | Cecilia Tanzi Yoga',
+      description:
+        'Orari settimanali dei corsi di Hatha, Vinyasa e Ashtanga Yoga con Cecilia Tanzi a Oggiono, Valmadrera, Lecco e La Valletta Brianza.',
+    },
     eyebrow: 'Calendario & Eventi',
     title: 'Gli orari settimanali',
     intro:
@@ -315,7 +345,7 @@ export const siteContent = {
         ],
       },
       {
-        place: 'Luma',
+        place: 'Luma Studio',
         location: 'Valmadrera',
         mapsUrl: 'https://maps.app.goo.gl/wWbiEkGwH74mJDKR7',
         classes: [
@@ -353,6 +383,11 @@ export const siteContent = {
   },
 
   faq: {
+    meta: {
+      title: 'Domande frequenti sui corsi di yoga | Cecilia Tanzi',
+      description:
+        'Le risposte alle domande più comuni su esperienza, flessibilità, cosa portare e lezioni individuali con Cecilia Tanzi.',
+    },
     eyebrow: 'Domande frequenti',
     title: 'Tutto quello che vuoi sapere',
     items: [
@@ -376,6 +411,11 @@ export const siteContent = {
   },
 
   contatti: {
+    meta: {
+      title: 'Contatti e prenotazione lezione di prova | Cecilia Tanzi Yoga',
+      description:
+        'Contatta Cecilia Tanzi per informazioni sui corsi di yoga tra Lecco e Brianza o per prenotare la tua prima lezione.',
+    },
     eyebrow: 'Contatti',
     title: 'Inizia il tuo percorso sul tappetino',
     intro:
@@ -402,3 +442,14 @@ export const siteContent = {
 } as const
 
 export type PageId = (typeof siteContent.nav)[number]['id']
+
+export const pageMeta: Record<PageId, { title: string; description: string }> = {
+  home: siteContent.home.meta,
+  'chi-sono': siteContent.chiSono.meta,
+  'stili-di-yoga': siteContent.stiliDiYoga.meta,
+  'dove-insegno': siteContent.doveInsegno.meta,
+  galleria: siteContent.galleria.meta,
+  calendario: siteContent.calendario.meta,
+  faq: siteContent.faq.meta,
+  contatti: siteContent.contatti.meta,
+}

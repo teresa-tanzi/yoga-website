@@ -17,7 +17,7 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-      <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
+      <SectionHeading as="h1" eyebrow={eyebrow} title={title} intro={intro} />
 
       {/* Orari settimanali — sezione in evidenza */}
       <div className="mt-12">

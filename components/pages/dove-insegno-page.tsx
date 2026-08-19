@@ -4,12 +4,12 @@ import { siteContent, type PageId } from '@/lib/site-content'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-export function NaturaPage({ goTo }: { goTo: (page: PageId) => void }) {
-  const { eyebrow, title, intro, places } = siteContent.natura
+export function DoveInsegnoPage({ goTo }: { goTo: (page: PageId) => void }) {
+  const { eyebrow, title, intro, places } = siteContent.doveInsegno
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <SectionHeading eyebrow={eyebrow} title={title} intro={intro} />
+      <SectionHeading as="h1" eyebrow={eyebrow} title={title} intro={intro} />
 
       <div className="mt-16 flex flex-col gap-16 md:gap-24">
         {places.map((place, i) => {
