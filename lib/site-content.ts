@@ -438,6 +438,7 @@ export const siteContent = {
   footer: {
     text: 'Pratiche di Hatha, Vinyasa e Ashtanga Yoga tra Lecco e Brianza.',
     note: 'RYT-200 · Diploma CONI',
+    vatNumber: '04318250133',
   },
 } as const
 
