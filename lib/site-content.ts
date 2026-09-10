@@ -141,7 +141,7 @@ export const siteContent = {
     eyebrow: 'Dove insegno',
     title: 'Le mie sedi',
     intro:
-      'La natura è il cuore del mio modo di insegnare. Ogni luogo offre un\u2019esperienza unica, tra terra, acqua e profumi.',
+      'La natura è il cuore del mio modo di insegnare. Ogni luogo offre un\u2019esperienza unica.',
     places: [
       {
         name: 'Ayre Studio',
@@ -165,7 +165,7 @@ export const siteContent = {
         name: 'Luma Studio',
         location: 'Valmadrera',
         text: "Il mercoledì propongo lezioni di Vinyasa Yoga, Ashtanga Yoga e Ginnastica per uomini presso Luma Studio, a Valmadrera.\n\nMaggiori dettagli arriveranno a breve.",
-        image: '',
+        image: '/images/luma-studio.jpeg',
         imageAlt: 'Spazio Luma Studio a Valmadrera',
         mapsUrl: 'https://maps.app.goo.gl/wWbiEkGwH74mJDKR7',
         active: true,
