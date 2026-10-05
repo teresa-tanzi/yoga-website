@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/backoffice',
     },
     sitemap: 'https://cecilia-tanzi-yoga.vercel.app/sitemap.xml',
   }

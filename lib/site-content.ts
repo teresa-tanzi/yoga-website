@@ -1,8 +1,21 @@
 // ============================================================================
 //  OGGETTO DATI CENTRALIZZATO
 //  Tutti i testi, gli orari, le FAQ e i percorsi delle immagini del sito.
-//  Modifica QUI per aggiornare i contenuti (collegabile in futuro a un CMS).
+//  Sono i contenuti di PARTENZA e di riserva: quelli reali si modificano dal
+//  backoffice (/backoffice) e vengono salvati nel database. Se il database non
+//  è raggiungibile o è vuoto, il sito mostra questi.
+//  Ogni voce di una lista deve avere i campi previsti in lib/content-schema.ts.
 // ============================================================================
+
+export type PageId =
+  | 'home'
+  | 'chi-sono'
+  | 'stili-di-yoga'
+  | 'dove-insegno'
+  | 'galleria'
+  | 'calendario'
+  | 'faq'
+  | 'contatti'
 
 export const siteContent = {
   brand: {
@@ -11,6 +24,7 @@ export const siteContent = {
     tagline: 'Hatha · Vinyasa · Ashtanga',
   },
 
+  // Il menu non è modificabile dal backoffice (vedi conformSite).
   nav: [
     { id: 'home', label: 'Home' },
     { id: 'chi-sono', label: 'Chi sono' },
@@ -20,7 +34,7 @@ export const siteContent = {
     { id: 'calendario', label: 'Calendario & Eventi' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contatti', label: 'Contatti' },
-  ],
+  ] as { id: PageId; label: string }[],
 
   home: {
     meta: {
@@ -86,6 +100,7 @@ export const siteContent = {
       },
     ],
     philosophy: {
+      title: '',
       intro: 'Lo yoga non è una performance, ma un ascolto. Le mie lezioni sono pensate per:',
       points: [
         'Ridurre lo stress e ritrovare calma mentale',
@@ -374,7 +389,7 @@ export const siteContent = {
       place: string
       location: string
       mapsUrl: string
-      classes: { day: string; style: string; time: string; note?: string }[]
+      classes: { day: string; style: string; time: string; note?: string; active?: boolean }[]
     }[],
     eventiTitle: 'Eventi',
     eventiIntro:
@@ -424,7 +439,7 @@ export const siteContent = {
       { label: 'Email', value: 'cecilia_tanzi@yahoo.it', href: 'mailto:cecilia_tanzi@yahoo.it' },
       { label: 'WhatsApp', value: '+39 348 984 2081', href: 'https://wa.me/393489842081?text=Ciao%20Cecilia%2C%20vorrei%20informazioni%20sui%20tuoi%20corsi%20di%20yoga' },
       { label: 'Instagram', value: '@cecilia_tanzi_yoga', href: 'https://www.instagram.com/cecilia_tanzi_yoga/' },
-      { label: 'Sedi', value: 'Oggiono · Lecco · Valmadrera · Pontida · La Valletta Brianza', href: null },
+      { label: 'Sedi', value: 'Oggiono · Lecco · Valmadrera · Pontida · La Valletta Brianza', href: '' },
     ],
     form: {
       nameLabel: 'Nome',
@@ -440,17 +455,20 @@ export const siteContent = {
     note: 'RYT-200 · Diploma CONI',
     vatNumber: '04318250133',
   },
-} as const
+}
 
-export type PageId = (typeof siteContent.nav)[number]['id']
+export type SiteContent = typeof siteContent
 
-export const pageMeta: Record<PageId, { title: string; description: string }> = {
-  home: siteContent.home.meta,
-  'chi-sono': siteContent.chiSono.meta,
-  'stili-di-yoga': siteContent.stiliDiYoga.meta,
-  'dove-insegno': siteContent.doveInsegno.meta,
-  galleria: siteContent.galleria.meta,
-  calendario: siteContent.calendario.meta,
-  faq: siteContent.faq.meta,
-  contatti: siteContent.contatti.meta,
+export function getPageMeta(content: SiteContent, id: PageId): { title: string; description: string } {
+  const metas: Record<PageId, { title: string; description: string }> = {
+    home: content.home.meta,
+    'chi-sono': content.chiSono.meta,
+    'stili-di-yoga': content.stiliDiYoga.meta,
+    'dove-insegno': content.doveInsegno.meta,
+    galleria: content.galleria.meta,
+    calendario: content.calendario.meta,
+    faq: content.faq.meta,
+    contatti: content.contatti.meta,
+  }
+  return metas[id]
 }

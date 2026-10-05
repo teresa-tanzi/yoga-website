@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
-import { siteContent } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
 export function FaqPage() {
-  const { eyebrow, title, items } = siteContent.faq
+  const { eyebrow, title, items } = useContent().faq
   const [open, setOpen] = useState<number | null>(0)
 
   const faqSchema = {

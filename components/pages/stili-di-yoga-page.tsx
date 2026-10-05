@@ -2,12 +2,13 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { siteContent, type PageId } from '@/lib/site-content'
+import type { PageId } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
 export function StiliDiYogaPage({ goTo }: { goTo: (page: PageId) => void }) {
-  const { eyebrow, title, intro, cards } = siteContent.stiliDiYoga
+  const { eyebrow, title, intro, cards } = useContent().stiliDiYoga
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   return (

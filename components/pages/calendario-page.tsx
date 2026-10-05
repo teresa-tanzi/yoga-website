@@ -1,5 +1,6 @@
 import { Sparkles, CalendarDays } from 'lucide-react'
-import { siteContent, type PageId } from '@/lib/site-content'
+import type { PageId } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
@@ -13,7 +14,12 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
     eventiTitle,
     eventiIntro,
     eventi,
-  } = siteContent.calendario
+  } = useContent().calendario
+
+  // I corsi disattivati dal backoffice non compaiono; una sede senza corsi attivi sparisce.
+  const visibleSchedule = schedule
+    .map((sede) => ({ ...sede, classes: sede.classes.filter((row) => row.active !== false) }))
+    .filter((sede) => sede.classes.length > 0)
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-20 md:py-28">
@@ -28,7 +34,7 @@ export function CalendarioPage({ goTo }: { goTo: (page: PageId) => void }) {
           </h3>
         </div>
         <div className="mt-6 flex flex-col gap-8">
-          {schedule.map((sede) => (
+          {visibleSchedule.map((sede) => (
             <div
               key={sede.place}
               className="overflow-hidden rounded-2xl border border-border bg-card"

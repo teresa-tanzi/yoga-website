@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import { Check } from 'lucide-react'
-import { siteContent, type PageId } from '@/lib/site-content'
+import type { PageId } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 
 export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
-  const { hero, welcome, highlights } = siteContent.home
-  const { philosophy } = siteContent.chiSono
+  const { hero, welcome, highlights } = useContent().home
+  const { philosophy } = useContent().chiSono
 
   return (
     <div className="animate-in fade-in duration-700">
@@ -61,9 +62,11 @@ export function HomePage({ goTo }: { goTo: (page: PageId) => void }) {
               ))}
             </div>
             <div className="mt-8 rounded-2xl border border-border bg-card p-7">
-              <h3 className="font-serif text-xl font-semibold text-foreground">
-                {philosophy.title}
-              </h3>
+              {philosophy.title && (
+                <h3 className="font-serif text-xl font-semibold text-foreground">
+                  {philosophy.title}
+                </h3>
+              )}
               <p className="mt-2 text-sm leading-relaxed text-secondary-foreground">
                 {philosophy.intro}
               </p>

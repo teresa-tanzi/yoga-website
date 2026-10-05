@@ -19,11 +19,22 @@ This is a **single-page Next.js app** (App Router). All navigation is client-sid
 
 ### Content
 
-All copy, image paths, contact details, schedule, and nav labels live in **`lib/site-content.ts`**. This is the only file that needs editing for content changes — page components read from it directly.
+I contenuti (testi, immagini, orari, contatti) vengono **dal database Neon** (tabella `site_content`) e si modificano da `/backoffice`. `lib/site-content.ts` contiene i contenuti di **partenza e di riserva**: li usa il sito se `DATABASE_URL` manca, il DB è vuoto o non risponde. Attenzione: una volta che Cecilia ha salvato dal backoffice, modificare `site-content.ts` NON cambia più il sito, vince il DB.
+
+- `app/page.tsx` (server) legge i contenuti con `lib/content.ts` e li passa a `components/site-app.tsx` (client), che li distribuisce con `ContentProvider`. I componenti li leggono con `useContent()`, non importano `siteContent`. Il menu (`nav`) resta statico.
+- `lib/content-schema.ts` valida tutto ciò che si salva/legge: la forma è quella di `siteContent`. **Se aggiungi un campo a una voce di una lista, aggiungilo anche in `ARRAY_ITEM_TEMPLATES`**, altrimenti viene scartato al salvataggio.
+- Il backoffice (`components/backoffice/editor.tsx`) genera i form dalla struttura dei contenuti: nuovi campi compaiono da soli; le etichette italiane sono in `LABELS`.
+
+### Backoffice
+
+- `/backoffice` (protetto da `proxy.ts` + controllo in ogni azione/route): login con `ADMIN_USERNAME` + `ADMIN_PASSWORD_HASH`, sessione JWT in cookie (`SESSION_SECRET`), tentativi limitati per IP (`login_attempts`).
+- Foto: caricate dal browser su Vercel Blob (`/api/backoffice/upload`), ridimensionate lato client (`lib/upload-image.ts`). Le foto eliminate dal sito restano nello store Blob.
+- Setup: variabili in `.env.example`; `pnpm db:setup` crea le tabelle; `pnpm admin:password` imposta la password su Vercel.
+- Salvare da `/backoffice` chiama `revalidatePath('/')`, quindi la home statica si rigenera.
 
 ### Images
 
-Real photos are in `public/images/` as `.jpg`, `.jpeg`, or `.webp`. The `welcome-detail` image is still the AI-generated placeholder (`.png`).
+Le foto di partenza sono in `public/images/` (quelle caricate dal backoffice stanno su Vercel Blob). Real photos are in `public/images/` as `.jpg`, `.jpeg`, or `.webp`. The `welcome-detail` image is still the AI-generated placeholder (`.png`).
 
 Large images (`hero-yoga-nature.jpg`, `instructor-portrait.jpg`) should be optimised with squoosh.app before deploying — they were reduced from ~14 MB and ~10 MB originals.
 

@@ -5,6 +5,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    // Foto caricate dal backoffice (Vercel Blob).
+    remotePatterns: [{ protocol: 'https', hostname: '*.public.blob.vercel-storage.com' }],
   },
 }
 

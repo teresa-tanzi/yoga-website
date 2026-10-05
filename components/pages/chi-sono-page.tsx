@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { siteContent } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 
 export function ChiSonoPage() {
-  const { eyebrow, title, image, imageAlt, sections } =
-    siteContent.chiSono
+  const content = useContent()
+  const { eyebrow, title, image, imageAlt, sections } = content.chiSono
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -45,7 +45,7 @@ export function ChiSonoPage() {
           ))}
 
           <p className="text-sm font-medium uppercase tracking-widest text-terracotta">
-            — {siteContent.brand.name}
+            — {content.brand.name}
           </p>
         </div>
       </div>

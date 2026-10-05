@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { siteContent } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 
 export function ContattiPage() {
-  const { eyebrow, title, intro, details, form } = siteContent.contatti
+  const { eyebrow, title, intro, details, form } = useContent().contatti
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
 

@@ -1,16 +1,20 @@
 import { siteContent, type PageId } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { Logo } from '@/components/logo'
+
 export function Footer({ goTo }: { goTo: (page: PageId) => void }) {
+  const { brand, footer } = useContent()
+
   return (
     <footer className="border-t border-border/60 bg-background px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs">
           <Logo onClick={() => goTo('home')} />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            {siteContent.footer.text}
+            {footer.text}
           </p>
           <p className="mt-3 text-xs font-medium uppercase tracking-widest text-terracotta">
-            {siteContent.footer.note}
+            {footer.note}
           </p>
         </div>
 
@@ -27,7 +31,7 @@ export function Footer({ goTo }: { goTo: (page: PageId) => void }) {
         </nav>
       </div>
       <div className="mx-auto mt-10 max-w-6xl border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {siteContent.brand.name} · {siteContent.brand.discipline} · P.IVA {siteContent.footer.vatNumber} · Sito web realizzato da{' '}
+        © {new Date().getFullYear()} {brand.name} · {brand.discipline} · P.IVA {footer.vatNumber} · Sito web realizzato da{' '}
         <a
           href="https://github.com/teresa-tanzi"
           target="_blank"

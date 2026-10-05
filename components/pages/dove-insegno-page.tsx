@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { MapPin } from 'lucide-react'
-import { siteContent, type PageId } from '@/lib/site-content'
+import type { PageId } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
 export function DoveInsegnoPage({ goTo }: { goTo: (page: PageId) => void }) {
-  const { eyebrow, title, intro, places } = siteContent.doveInsegno
+  const { eyebrow, title, intro, places } = useContent().doveInsegno
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">

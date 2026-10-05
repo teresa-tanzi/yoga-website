@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { siteContent } from '@/lib/site-content'
+import { useContent } from '@/components/content-provider'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
 export function GalleriaPage() {
-  const { eyebrow, title, intro, photos } = siteContent.galleria
+  const { eyebrow, title, intro, photos } = useContent().galleria
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [direction, setDirection] = useState<1 | -1>(1)
 
@@ -47,7 +47,7 @@ export function GalleriaPage() {
       <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-5">
         {photos.map((photo, i) => (
           <button
-            key={photo.image}
+            key={`${photo.image}-${i}`}
             onClick={() => setOpenIndex(i)}
             className="group relative aspect-square overflow-hidden rounded-2xl"
           >
@@ -106,12 +106,12 @@ export function GalleriaPage() {
                 className="object-contain"
               />
             </div>
-            {(active.caption || active.credit) && (
+            {(active.caption || active.credit?.name) && (
               <div key={`caption-${openIndex}`} className="animate-in fade-in text-center duration-300">
                 {active.caption && (
                   <p className="text-sm text-white/90">{active.caption}</p>
                 )}
-                {active.credit && (
+                {active.credit?.name && active.credit.url && (
                   <a
                     href={active.credit.url}
                     target="_blank"
